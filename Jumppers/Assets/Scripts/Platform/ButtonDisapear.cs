@@ -1,24 +1,33 @@
 using UnityEngine;
 
-public class ButtonDisappear : MonoBehaviour
+public class ButtonPlatformActivator : MonoBehaviour
 {
-    public float delay = 0.3f; // 사라지는 딜레이
+    public GameObject platformToActivate; // 나타날 플랫폼
+    public float delay = 0.3f;            // 버튼 밟은 후 딜레이
+
+    private bool activated = false;
 
     private void OnTriggerEnter(Collider other)
     {
+        if (activated) return;
+
         if (other.CompareTag("Player") || other.attachedRigidbody != null)
         {
-            // 플레이어의 발 위치가 버튼보다 위인지 체크
+            // 위에서 밟았는지 체크
             if (other.transform.position.y > transform.position.y + 0.1f)
             {
-                // 0.3초 뒤에 사라짐
-                Invoke(nameof(Disappear), delay);
+                activated = true;
+                Invoke(nameof(ActivatePlatform), delay);
             }
         }
     }
 
-    void Disappear()
+    private void ActivatePlatform()
     {
+        if (platformToActivate != null)
+            platformToActivate.SetActive(true);
+
+        // 버튼 사라지기
         gameObject.SetActive(false);
     }
 }

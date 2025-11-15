@@ -87,4 +87,26 @@ public class PlayerController : MonoBehaviour
         // 디버깅용 레이저 그리기 (Scene 뷰에서만 보임)
         Debug.DrawRay(transform.position, Vector3.down * (distToGround + 0.1f), Color.red);
     }
+
+    public void Die()
+    {
+        this.enabled = false;
+
+    }
+
+    public void Respawn(Vector3 spawnPosition)
+    {
+        // 1. 위치 리셋
+        transform.position = spawnPosition;
+
+        // 2. (중요!) 속도 초기화 - 이걸 안 하면 추락 속도가 남아서 바닥을 뚫고 감
+        if (rb == null) rb = GetComponent<Rigidbody>();
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero; // 회전 속도도 0으로
+
+        // 3. 다시 스크립트를 활성화해서 조작 가능하게 함
+        this.enabled = true;
+
+        Debug.Log("Player Respawned!");
+    }
 }

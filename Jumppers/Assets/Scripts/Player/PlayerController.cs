@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public float currentMoveSpeed;
     [HideInInspector] public float currentJumpForce;
 
+    public float fallMultiplier = 2.5f;
+
     public LayerMask groundLayer; // 바닥으로 인식할 레이어
 
     private Rigidbody rb;
@@ -42,6 +44,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        ApplyJumpPhysics();
     }
 
     void Move()
@@ -78,11 +81,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void ApplyJumpPhysics()
+    {
+        // 1. 낙하 가속 (Fast Fall)
+        // velocity.y < 0 은 플레이어가 떨어지고 있다는 의미
+        if (rb.linearVelocity.y < 0)
+        {
+            // (fallMultiplier - 1)을 하는 이유:
+            // 유니티가 기본 중력(1)을 이미 적용 중이므로, 우리는 '추가할' 중력만 더해줌
+            rb.linearVelocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
+        }
+    }
+
     void CheckGround()
     {
         // 플레이어 중심에서 아래로 레이저를 쏴서 바닥이 있는지 확인
         // 0.1f는 여유 거리
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, distToGround + 0.1f, groundLayer);
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, distToGround + 0.5f, groundLayer);
 
         // 디버깅용 레이저 그리기 (Scene 뷰에서만 보임)
         Debug.DrawRay(transform.position, Vector3.down * (distToGround + 0.1f), Color.red);

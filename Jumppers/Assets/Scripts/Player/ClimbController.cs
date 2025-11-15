@@ -26,7 +26,7 @@ public class WallClimbAuto : MonoBehaviour
             rb.useGravity = false;
 
             // 위로 지속적으로 이동
-            rb.velocity = new Vector3(rb.velocity.x, climbSpeed, rb.velocity.z);
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, climbSpeed, rb.linearVelocity.z);
         }
     }
 

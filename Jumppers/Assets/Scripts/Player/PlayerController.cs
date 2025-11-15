@@ -92,6 +92,7 @@ public class PlayerController : MonoBehaviour
     {
         this.enabled = false;
 
+        GameManager.Instance.HandlePlayerDeath();
     }
 
     public void Respawn(Vector3 spawnPosition)

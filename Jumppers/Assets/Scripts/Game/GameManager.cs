@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public PlayerController playerController;
     public TextMeshProUGUI scoreText;
-
     public int score = 0;
     public float respawnDelay = 2.0f;
+    public Transform respawnPoint;
 
-    private Transform playerStartPoint;
+    private Vector3 playerStartPoint;
     private int currentHeight;
 
     void Awake()
@@ -26,14 +26,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        playerStartPoint = player.transform;
+        playerStartPoint = player.transform.position;
         currentHeight = 0;
         score = 0;
     }
 
     void Update()
-    {        
-        currentHeight = Mathf.FloorToInt(player.transform.position.y - playerStartPoint.position.y);
+    {
+        currentHeight = Mathf.FloorToInt(player.transform.position.y - playerStartPoint.y);
         if(currentHeight < 0)
         {
             currentHeight = 0;
@@ -67,6 +67,6 @@ public class GameManager : MonoBehaviour
         // 3. (선택) 화면 페이드 인
 
         // 4. 플레이어에게 리스폰 명령
-        playerController.Respawn(playerStartPoint.position);
+        playerController.Respawn(respawnPoint);
     }
 }

@@ -92,12 +92,14 @@ public class PlayerController : MonoBehaviour
     {
         this.enabled = false;
 
+        GameManager.Instance.HandlePlayerDeath();
     }
 
-    public void Respawn(Vector3 spawnPosition)
+    public void Respawn(Transform spawnPoint)
     {
         // 1. 위치 리셋
-        transform.position = spawnPosition;
+        transform.position = spawnPoint.position;
+        transform.rotation = spawnPoint.rotation;
 
         // 2. (중요!) 속도 초기화 - 이걸 안 하면 추락 속도가 남아서 바닥을 뚫고 감
         if (rb == null) rb = GetComponent<Rigidbody>();

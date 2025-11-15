@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         }
 
         score = currentHeight;
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
 
     public void GameOver()
@@ -48,6 +48,14 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Game Over!\nScore: {score}");
         currentHeight = 0;
         score = 0;
+
+        Time.timeScale = 0f;
+
+        var hud = Object.FindFirstObjectByType<HUDController>();
+        if (hud != null)
+        {
+            hud.ShowGameOver();
+        }
     }
 
     public void HandlePlayerDeath()
@@ -68,5 +76,6 @@ public class GameManager : MonoBehaviour
 
         // 4. 플레이어에게 리스폰 명령
         playerController.Respawn(respawnPoint);
+        Time.timeScale = 1f;
     }
 }

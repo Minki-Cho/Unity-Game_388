@@ -106,8 +106,7 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         this.enabled = false;
-
-        GameManager.Instance.HandlePlayerDeath();
+        GameManager.Instance.GameOver();
     }
 
     public void Respawn(Transform spawnPoint)

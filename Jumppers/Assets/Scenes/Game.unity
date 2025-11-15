@@ -2589,7 +2589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1176540884}
   playerController: {fileID: 1176540886}
-  scoreText: {fileID: 1674914238}
+  scoreText: {fileID: 1596845704}
   score: 0
   respawnDelay: 0
   respawnPoint: {fileID: 454331250}

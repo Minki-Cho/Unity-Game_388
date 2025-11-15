@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 public class HUDController : MonoBehaviour
@@ -55,6 +55,9 @@ public class HUDController : MonoBehaviour
     public void OnClick_Restart()
     {
         Debug.Log("[HUDController] Pushed Restart Button ");
+        GameManager.Instance.HandlePlayerDeath();
+        gameOverPanel.SetActive(false);
+        winPanel.SetActive(false);
     }
 
     public void OnClick_MainMenu()

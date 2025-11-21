@@ -20,6 +20,12 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpSound;
     private AudioSource audioSource;
 
+    [Header("VFX")]
+    [SerializeField] private LandingEffectController landingEffectController;
+
+    // 착지 순간 감지용
+    private bool wasGrounded;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,6 +35,10 @@ public class PlayerController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
+
+        // VFX 컨트롤러 자동 할당 (같은 오브젝트에 붙어 있다면)
+        if (landingEffectController == null)
+            landingEffectController = GetComponent<LandingEffectController>();
 
         ResetStats();
     }
@@ -41,7 +51,19 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // 1) 먼저 바닥 체크
         CheckGround();
+
+        // 2) 공중(false)이었다가 이번 프레임에 땅(true)이 되면 = 착지
+        if (!wasGrounded && isGrounded)
+        {
+            PlayLandingEffect();
+        }
+
+        // 3) 착지 체크 후, 이번 프레임 상태를 저장
+        wasGrounded = isGrounded;
+
+        // 4) 점프는 원래대로 유지
         Jump();
     }
 
@@ -95,6 +117,19 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics.Raycast(transform.position, Vector3.down, distToGround + 0.5f, groundLayer);
         Debug.DrawRay(transform.position, Vector3.down * (distToGround + 0.1f), Color.red);
+    }
+
+    private void PlayLandingEffect()
+    {
+        if (landingEffectController != null)
+        {
+            landingEffectController.PlayLandingEffect();
+        }
+        else
+        {
+            // 디버그용
+            // Debug.Log("[PlayerController] LandingEffectController가 할당되지 않음");
+        }
     }
 
     public void Die()

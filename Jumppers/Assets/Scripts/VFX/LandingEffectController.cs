@@ -3,32 +3,26 @@ using UnityEngine;
 public class LandingEffectController : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform landingPoint;     
-    [SerializeField] private GameObject landingDustPrefab; 
+    [SerializeField] private Transform landingPoint;       // 발밑 위치
+    [SerializeField] private ParticleSystem landingDust;  // 씬에 있는 파티클
 
     public void PlayLandingEffect()
     {
-        if (landingDustPrefab == null || landingPoint == null)
+        if (landingDust == null || landingPoint == null)
         {
-            Debug.LogWarning("[LandingEffectController] Prefab or landingPoint is not set!");
+            Debug.LogWarning("[LandingEffectController] landingDust or landingPoint is not set!");
             return;
         }
 
-        GameObject dust = Instantiate(
-            landingDustPrefab,
-            landingPoint.position,
-            Quaternion.identity
-        );
+        // 발밑 위치로 옮기고
+        Transform dustTransform = landingDust.transform;
+        dustTransform.position = landingPoint.position;
 
+        // 각도도 Player 방향에 맞추고 싶으면 (선택)
+        // dustTransform.forward = Vector3.up; // 방향 고정하거나, 필요에 맞게 설정
 
-        ParticleSystem ps = dust.GetComponent<ParticleSystem>();
-        if (ps != null)
-        {
-            Destroy(dust, ps.main.duration + ps.main.startLifetimeMultiplier);
-        }
-        else
-        {
-            Destroy(dust, 2f); // 백업용
-        }
+        // 파티클 재생
+        landingDust.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        landingDust.Play();
     }
 }

@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+
 public class HUDController : MonoBehaviour
 {
     [Header("UI References")]
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI timeText;
 
     [Header("Game Over / Win Panels")]
     [SerializeField] private GameObject gameOverPanel;
@@ -13,16 +15,8 @@ public class HUDController : MonoBehaviour
     [Header("Scene Names")]
     [SerializeField] private string mainMenuSceneName = "MainMenu";
 
-    private GameManager gm;
-
-    private void Awake()
-    {
-        gm = GameManager.Instance;
-        if (gm == null)
-        {
-            Debug.LogError("[HUDController] GameManager.Cant find Instance!");
-        }
-    }
+    private float elapsedTime = 0f;
+    private bool isTimerRunning = true;
 
     private void Start()
     {
@@ -32,22 +26,34 @@ public class HUDController : MonoBehaviour
 
     private void Update()
     {
-        if (gm == null) return;
+        if (GameManager.Instance == null) return;
 
         if (scoreText != null)
         {
             scoreText.text = $"Score: {GameManager.Instance.coinScore}";
         }
+
+        if (isTimerRunning && timeText != null)
+        {
+            elapsedTime += Time.deltaTime;
+
+            int minutes = Mathf.FloorToInt(elapsedTime / 60f);
+            int seconds = Mathf.FloorToInt(elapsedTime % 60f);
+
+            timeText.text = $"{minutes:00}:{seconds:00}";
+        }
     }
 
     public void ShowGameOver()
     {
+        isTimerRunning = false;
         if (gameOverPanel != null)
             gameOverPanel.SetActive(true);
     }
 
     public void ShowWin()
     {
+        isTimerRunning = false;
         if (winPanel != null)
             winPanel.SetActive(true);
     }
@@ -55,6 +61,10 @@ public class HUDController : MonoBehaviour
     public void OnClick_Restart()
     {
         Debug.Log("[HUDController] Pushed Restart Button ");
+
+        elapsedTime = 0f;
+        isTimerRunning = true;
+
         GameManager.Instance.HandlePlayerDeath();
         gameOverPanel.SetActive(false);
         winPanel.SetActive(false);

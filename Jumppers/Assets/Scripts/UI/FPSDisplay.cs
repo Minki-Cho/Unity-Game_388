@@ -1,28 +1,77 @@
 using UnityEngine;
+using TMPro;
 
 public class FPSDisplay : MonoBehaviour
 {
-    float deltaTime = 0.0f;
+    public static FPSDisplay Instance { get; private set; }
 
-    void Update()
+    [Header("UI")]
+    [SerializeField] private TextMeshProUGUI fpsText;
+
+    [Header("Settings")]
+    [SerializeField] private bool startEnabled = true;
+
+    private bool showFPS;
+    private float deltaTime;
+
+    public bool IsShowing => showFPS;
+
+    private const string PlayerPrefsKey = "ShowFPS";
+
+    private void Awake()
     {
-        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); 
+
+        if (fpsText == null)
+        {
+            Debug.LogWarning("[FPSDisplay] fpsText doesn't set on Inspector");
+        }
+
+        if (PlayerPrefs.HasKey(PlayerPrefsKey))
+        {
+            bool saved = PlayerPrefs.GetInt(PlayerPrefsKey, 1) == 1;
+            SetShowFPS(saved, save: false);
+        }
+        else
+        {
+            SetShowFPS(startEnabled, save: false);
+        }
     }
 
-    void OnGUI()
+    private void Update()
     {
-        int w = Screen.width, h = Screen.height;
+        if (!showFPS || fpsText == null)
+            return;
 
-        GUIStyle style = new GUIStyle();
-
-        Rect rect = new Rect(10, 10, w, h * 2 / 100);
-        style.alignment = TextAnchor.UpperLeft;
-        style.fontSize = h * 2 / 50;
-        style.normal.textColor = Color.yellow;
-
-        float msec = deltaTime * 1000.0f;
+        deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
         float fps = 1.0f / deltaTime;
-        string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
-        GUI.Label(rect, text, style);
+
+        fpsText.text = $"{fps:0} FPS";
+    }
+
+    private void SetShowFPS(bool value, bool save)
+    {
+        showFPS = value;
+
+        if (fpsText != null)
+            fpsText.gameObject.SetActive(showFPS);
+
+        if (save)
+        {
+            PlayerPrefs.SetInt(PlayerPrefsKey, showFPS ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+    }
+
+    public void SetShowFPSFromUI(bool value)
+    {
+        SetShowFPS(value, save: true);
     }
 }

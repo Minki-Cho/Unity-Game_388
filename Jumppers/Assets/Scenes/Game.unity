@@ -2954,6 +2954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &114605748 stripped
 Transform:
@@ -4214,6 +4216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &155460095 stripped
 Transform:
@@ -4706,6 +4710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &164013324 stripped
 Transform:
@@ -5570,6 +5576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &196147479 stripped
 Transform:
@@ -6338,6 +6346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &217547277 stripped
 Transform:
@@ -6461,6 +6471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &219976835 stripped
 Transform:
@@ -6589,6 +6601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &222014947 stripped
 Transform:
@@ -7164,6 +7178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &243488314 stripped
 Transform:
@@ -8129,6 +8145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &268220000 stripped
 Transform:
@@ -8669,6 +8687,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &295235847 stripped
 Transform:
@@ -10234,6 +10254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &355091127 stripped
 Transform:
@@ -10428,6 +10450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &362882651 stripped
 Transform:
@@ -10930,6 +10954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &377587200 stripped
 Transform:
@@ -11119,6 +11145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &381905782 stripped
 Transform:
@@ -11597,6 +11625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &406899176 stripped
 Transform:
@@ -11842,6 +11872,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &413251136 stripped
 Transform:
@@ -12240,6 +12272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &424610560 stripped
 Transform:
@@ -12460,6 +12494,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &432136253 stripped
 Transform:
@@ -12710,6 +12746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &436045569 stripped
 Transform:
@@ -12746,6 +12784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d262fb31ed836a448f8ae9010ad8b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  pickupEffect: {fileID: 1741533097}
 --- !u!65 &438959795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12889,6 +12929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &440065695 stripped
 Transform:
@@ -13180,6 +13222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &459796244 stripped
 Transform:
@@ -13444,6 +13488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &463725999 stripped
 Transform:
@@ -13694,6 +13740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &474633276 stripped
 Transform:
@@ -13817,6 +13865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &477575826 stripped
 Transform:
@@ -14067,6 +14117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &484304261 stripped
 Transform:
@@ -14124,6 +14176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &484493656 stripped
 Transform:
@@ -14871,6 +14925,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &532698711 stripped
 Transform:
@@ -15202,6 +15258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &550598186 stripped
 Transform:
@@ -15630,6 +15688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &559858242 stripped
 Transform:
@@ -15936,6 +15996,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &564465209 stripped
 Transform:
@@ -16059,6 +16121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &566123360 stripped
 Transform:
@@ -16365,6 +16429,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &581068724 stripped
 Transform:
@@ -16554,6 +16620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &584285683 stripped
 Transform:
@@ -16917,6 +16985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &591391523 stripped
 Transform:
@@ -18144,6 +18214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &638268812 stripped
 Transform:
@@ -19169,6 +19241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &677786420 stripped
 Transform:
@@ -19287,6 +19361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &679175389 stripped
 Transform:
@@ -19804,6 +19880,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &695739404 stripped
 Transform:
@@ -19927,6 +20005,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &699863159 stripped
 Transform:
@@ -19994,6 +20074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &705525847 stripped
 Transform:
@@ -20183,6 +20265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &706669351 stripped
 Transform:
@@ -20769,6 +20853,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &729202846 stripped
 Transform:
@@ -21019,6 +21105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &741717182 stripped
 Transform:
@@ -21343,6 +21431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &758424844 stripped
 Transform:
@@ -22526,6 +22616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &811454819 stripped
 Transform:
@@ -23394,6 +23486,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &826550663 stripped
 Transform:
@@ -24034,6 +24128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &844552792 stripped
 Transform:
@@ -24091,6 +24187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &846785972 stripped
 Transform:
@@ -24250,6 +24348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &850837206 stripped
 Transform:
@@ -24667,6 +24767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &886899017 stripped
 Transform:
@@ -24851,6 +24953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &889444048 stripped
 Transform:
@@ -24979,6 +25083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &894635653 stripped
 Transform:
@@ -25554,6 +25660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &915088436 stripped
 Transform:
@@ -25743,6 +25851,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &920392867 stripped
 Transform:
@@ -26288,6 +26398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &938021451 stripped
 Transform:
@@ -27690,6 +27802,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1000920019 stripped
 Transform:
@@ -28074,6 +28188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1025987829 stripped
 Transform:
@@ -30012,6 +30128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1117985333 stripped
 Transform:
@@ -30449,6 +30567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1123023425 stripped
 Transform:
@@ -30506,6 +30626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1123110624 stripped
 Transform:
@@ -30629,6 +30751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1125103773 stripped
 Transform:
@@ -31499,6 +31623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!1 &1155187837
 GameObject:
@@ -31767,6 +31893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1158408722 stripped
 Transform:
@@ -32027,6 +32155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1162279371 stripped
 Transform:
@@ -32457,6 +32587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1172878922 stripped
 Transform:
@@ -33656,6 +33788,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1208372172 stripped
 Transform:
@@ -34941,6 +35075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1270830322 stripped
 Transform:
@@ -35506,6 +35642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1305240356 stripped
 Transform:
@@ -36426,6 +36564,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1329237029 stripped
 Transform:
@@ -37301,6 +37441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1352732855 stripped
 Transform:
@@ -38214,6 +38356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1386169138 stripped
 Transform:
@@ -39063,6 +39207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1427830447 stripped
 Transform:
@@ -39979,6 +40125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1466601097 stripped
 Transform:
@@ -40168,6 +40316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1476172210 stripped
 Transform:
@@ -40677,6 +40827,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1495799805 stripped
 Transform:
@@ -40739,6 +40891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1496990859 stripped
 Transform:
@@ -40796,6 +40950,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1498304696 stripped
 Transform:
@@ -41736,6 +41892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1561054410 stripped
 Transform:
@@ -41920,6 +42078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1564764196 stripped
 Transform:
@@ -42002,6 +42162,93 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6152299014247383670, guid: 57b32168a216646469b2daa667456376, type: 3}
   m_PrefabInstance: {fileID: 1242105582}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1569651172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1569651173}
+  - component: {fileID: 1569651174}
+  m_Layer: 0
+  m_Name: HJD_Cloud00 (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1569651173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569651172}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 55, y: 47.62, z: 70.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1989759442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1569651174
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569651172}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2cb7dbf0091357d48b19ec25a9f3812b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10.24, y: 10.24}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1569883844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42383,6 +42630,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1583266907 stripped
 Transform:
@@ -42717,6 +42966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1604494922 stripped
 Transform:
@@ -43023,6 +43274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1608073381 stripped
 Transform:
@@ -43248,6 +43501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1621702277 stripped
 Transform:
@@ -43315,6 +43570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1627510118 stripped
 Transform:
@@ -43994,6 +44251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1659928992 stripped
 Transform:
@@ -44521,6 +44780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1685617415 stripped
 Transform:
@@ -45146,6 +45407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1712862309 stripped
 Transform:
@@ -46298,6 +46561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1757258497 stripped
 Transform:
@@ -46720,6 +46985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1768756251 stripped
 Transform:
@@ -48110,6 +48377,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1827339605 stripped
 Transform:
@@ -48462,6 +48731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1831489914 stripped
 Transform:
@@ -49064,6 +49335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1839554479 stripped
 Transform:
@@ -50151,6 +50424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &1885730465 stripped
 Transform:
@@ -51942,6 +52217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!65 &1957876358
 BoxCollider:
@@ -52846,6 +53123,7 @@ Transform:
   - {fileID: 291142457}
   - {fileID: 42874001}
   - {fileID: 1119754058}
+  - {fileID: 1569651173}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1991961154
@@ -53412,6 +53690,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &2016292147 stripped
 Transform:
@@ -54196,6 +54476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &2054247904 stripped
 Transform:
@@ -54851,6 +55133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &2075978628 stripped
 Transform:
@@ -54979,6 +55263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &2078326366 stripped
 Transform:
@@ -55378,6 +55664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &2086313936 stripped
 Transform:
@@ -55567,6 +55855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &2089941114 stripped
 Transform:
@@ -56736,6 +57026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &2117109995 stripped
 Transform:
@@ -57158,6 +57450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef811ea3afc7214f911159cd61e2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin_pickupSound: {fileID: 8300000, guid: 810f4235eb9631f4c8526d2d593ec2ce, type: 3}
+  coin_pickupEffect: {fileID: 0}
   value: 1
 --- !u!4 &2135820382 stripped
 Transform:

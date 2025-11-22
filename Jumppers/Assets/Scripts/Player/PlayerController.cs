@@ -130,7 +130,11 @@ public class PlayerController : MonoBehaviour
 
             // 🔊 점프 사운드
             if (jumpSound != null)
+            {
+                audioSource.volume = 0.5f;  // 절반 볼륨
                 audioSource.PlayOneShot(jumpSound);
+            }
+
         }
     }
 

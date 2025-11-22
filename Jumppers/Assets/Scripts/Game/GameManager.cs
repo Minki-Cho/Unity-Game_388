@@ -101,17 +101,16 @@ public class GameManager : MonoBehaviour
         playerController.Respawn(respawnPoint);
         Time.timeScale = 1f;
     }
+    public void GameClear()
+    {
+        Debug.Log($"GAME CLEAR!\nHeight: {heightScore}\nCoins: {coinScore}");
 
-    //public void GameClear()
-    //{
-    //    Debug.Log("GAME CLEAR!");
+        Time.timeScale = 0f;
 
-    //    Time.timeScale = 0f;
-
-    //    var hud = Object.FindFirstObjectByType<HUDController>();
-    //    if (hud != null)
-    //    {
-    //        //hud.ShowGameClear();
-    //    }
-    //}
+        var hud = Object.FindFirstObjectByType<HUDController>();
+        if (hud != null)
+        {
+            hud.ShowWin();   
+        }
+    }
 }

@@ -28,7 +28,7 @@ public class Key : MonoBehaviour
         }
 
         // 진원박은 여기다가 만들면 된다다다다다다다다다.
-       // GameManager.Instance.GameClear();
+       GameManager.Instance.GameClear();
 
         // 4. 키 오브젝트 삭제
         Destroy(gameObject);

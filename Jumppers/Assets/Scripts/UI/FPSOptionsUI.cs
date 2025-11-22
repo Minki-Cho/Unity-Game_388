@@ -10,7 +10,7 @@ public class FPSOptionsUI : MonoBehaviour
         // FPSDisplay가 이미 씬에 떠 있는 전제 (Splash에서 DontDestroyOnLoad 했으니까)
         if (fpsToggle == null)
         {
-            Debug.LogWarning("[FPSOptionsUI] fpsToggle is not available.");
+            //Debug.LogWarning("[FPSOptionsUI] fpsToggle is not available.");
             return;
         }
 

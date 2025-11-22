@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     public float landingRecoverDuration = 0.15f;
 
     private bool landingSquashing = false;
+
     private bool isSquashing = false;
 
     // --------- ✈ 치트 플라잉 모드 ---------
@@ -66,10 +67,6 @@ public class PlayerController : MonoBehaviour
             landingEffectController = GetComponent<LandingEffectController>();
 
         ResetStats();
-
-        // 시작부터 치트 플라잉 모드 켜고 싶으면
-        if (flyCheatEnabled)
-            SetFlyMode(true);
     }
 
     public void ResetStats()
@@ -98,16 +95,21 @@ public class PlayerController : MonoBehaviour
         if (!wasGrounded && isGrounded)
         {
             PlayLandingEffect();
-
-            if (!landingSquashing)
-                StartCoroutine(LandingSquash());
         }
 
-        // 3) 상태 갱신
+        // 3) 착지 체크 후, 이번 프레임 상태를 저장
         wasGrounded = isGrounded;
 
-        // 4) 점프
+        // 4) 점프는 원래대로 유지
         Jump();
+
+        //if (!wasGrounded && isGrounded)
+        //{
+        //    if (!landingSquashing)
+        //        StartCoroutine(LandingSquash());
+        //}
+
+        wasGrounded = isGrounded; // 상태 갱신
     }
 
     void FixedUpdate()
@@ -143,7 +145,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // ✈ 플라잉 이동
     void FlyMove()
     {
         float h = Input.GetAxisRaw("Horizontal");
@@ -184,8 +185,26 @@ public class PlayerController : MonoBehaviour
             // 🔊 점프 사운드
             if (jumpSound != null)
             {
-                audioSource.PlayOneShot(jumpSound, 0.5f);  // 이 점프 사운드만 50% 볼륨
+                audioSource.volume = 0.5f;  // 절반 볼륨
+                audioSource.PlayOneShot(jumpSound);
             }
+
+        }
+    }
+
+    private void SetFlyMode(bool enable)
+    {
+        if (rb == null) return;
+
+        if (enable)
+        {
+            rb.useGravity = false;
+            rb.linearVelocity = Vector3.zero;
+            transform.localScale = normalScale;
+        }
+        else
+        {
+            rb.useGravity = true;
         }
     }
 
@@ -209,22 +228,10 @@ public class PlayerController : MonoBehaviour
         {
             landingEffectController.PlayLandingEffect();
         }
-    }
-
-    // ✈ 실제로 Rigidbody 세팅을 바꿔주는 함수
-    private void SetFlyMode(bool enable)
-    {
-        if (rb == null) return;
-
-        if (enable)
-        {
-            rb.useGravity = false;
-            rb.linearVelocity = Vector3.zero;
-            transform.localScale = normalScale;
-        }
         else
         {
-            rb.useGravity = true;
+            // 디버그용
+            // Debug.Log("[PlayerController] LandingEffectController가 할당되지 않음");
         }
     }
 
@@ -251,6 +258,7 @@ public class PlayerController : MonoBehaviour
     {
         isSquashing = true;
 
+        // 1) 아래로 찌그러트리기
         float t = 0;
         while (t < squashDuration)
         {
@@ -260,6 +268,7 @@ public class PlayerController : MonoBehaviour
         }
         transform.localScale = jumpSquashScale;
 
+        // 2) 다시 원래 사이즈로 천천히 복구
         t = 0;
         while (t < recoverDuration)
         {
@@ -276,6 +285,7 @@ public class PlayerController : MonoBehaviour
     {
         landingSquashing = true;
 
+        // 1) 착지 → 아래로 찌그러짐
         float t = 0f;
         while (t < landingSquashDuration)
         {
@@ -285,6 +295,7 @@ public class PlayerController : MonoBehaviour
         }
         transform.localScale = landingSquashScale;
 
+        // 2) 다시 원래로 복구
         t = 0f;
         while (t < landingRecoverDuration)
         {

@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,6 +27,22 @@ public class PlayerController : MonoBehaviour
 
     // 착지 순간 감지용
     private bool wasGrounded;
+
+    // --- Squash & Stretch 설정 ---
+    [Header("Squash & Stretch")]
+    public Vector3 normalScale = new Vector3(1f, 1f, 1f);
+    public Vector3 jumpSquashScale = new Vector3(1.2f, 0.7f, 1.2f);
+    public float squashDuration = 0.1f;   // 찌그러지는 속도
+    public float recoverDuration = 0.15f; // 원상복구 속도
+
+    [Header("Landing Squash Settings")]
+    public Vector3 landingSquashScale = new Vector3(1.3f, 0.6f, 1.3f);
+    public float landingSquashDuration = 0.1f;
+    public float landingRecoverDuration = 0.15f;
+
+    private bool landingSquashing = false;
+
+    private bool isSquashing = false;
 
     void Start()
     {
@@ -65,6 +83,14 @@ public class PlayerController : MonoBehaviour
 
         // 4) 점프는 원래대로 유지
         Jump();
+
+        if (!wasGrounded && isGrounded)
+        {
+            if (!landingSquashing)
+                StartCoroutine(LandingSquash());
+        }
+
+        wasGrounded = isGrounded; // 상태 갱신
     }
 
     void FixedUpdate()
@@ -98,6 +124,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector3.up * currentJumpForce, ForceMode.Impulse);
+
+            if (!isSquashing)
+                StartCoroutine(JumpSquash());
 
             // 🔊 점프 사운드
             if (jumpSound != null)
@@ -148,5 +177,59 @@ public class PlayerController : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
 
         this.enabled = true;
+    }
+
+    IEnumerator JumpSquash()
+    {
+        isSquashing = true;
+
+        // 1) 아래로 찌그러트리기
+        float t = 0;
+        while (t < squashDuration)
+        {
+            transform.localScale = Vector3.Lerp(normalScale, jumpSquashScale, t / squashDuration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        transform.localScale = jumpSquashScale;
+
+        // 2) 다시 원래 사이즈로 천천히 복구
+        t = 0;
+        while (t < recoverDuration)
+        {
+            transform.localScale = Vector3.Lerp(jumpSquashScale, normalScale, t / recoverDuration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        transform.localScale = normalScale;
+
+        isSquashing = false;
+    }
+
+    IEnumerator LandingSquash()
+    {
+        landingSquashing = true;
+
+        // 1) 착지 → 아래로 찌그러짐
+        float t = 0f;
+        while (t < landingSquashDuration)
+        {
+            transform.localScale = Vector3.Lerp(normalScale, landingSquashScale, t / landingSquashDuration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        transform.localScale = landingSquashScale;
+
+        // 2) 다시 원래로 복구
+        t = 0f;
+        while (t < landingRecoverDuration)
+        {
+            transform.localScale = Vector3.Lerp(landingSquashScale, normalScale, t / landingRecoverDuration);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        transform.localScale = normalScale;
+
+        landingSquashing = false;
     }
 }

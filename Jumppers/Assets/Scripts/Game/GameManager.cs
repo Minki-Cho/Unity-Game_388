@@ -6,15 +6,22 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [Header("Player Settings")]
     public GameObject player;
     public PlayerController playerController;
+
+    [Header("UI")]
     public TextMeshProUGUI scoreText;
-    public int score = 0;
+    public TextMeshProUGUI coinText;  // ← 코인텍스트 추가
+
+    [Header("Score System")]
+    public int heightScore = 0;        // 기존 높이 점수
+    public int coinScore = 0;          // 코인 점수
+
     public float respawnDelay = 2.0f;
     public Transform respawnPoint;
 
     private Vector3 playerStartPoint;
-    private int currentHeight;
 
     void Awake()
     {
@@ -27,27 +34,48 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         playerStartPoint = player.transform.position;
-        currentHeight = 0;
-        score = 0;
+        heightScore = 0;
+        coinScore = 0;
+
+        UpdateScoreUI();
     }
 
     void Update()
     {
-        currentHeight = Mathf.FloorToInt(player.transform.position.y - playerStartPoint.y);
-        if(currentHeight < 0)
-        {
-            currentHeight = 0;
-        }
+        // 높이 기반 점수 계산
+        heightScore = Mathf.FloorToInt(player.transform.position.y - playerStartPoint.y);
 
-        score = currentHeight;
-        scoreText.text = "Score: " + score.ToString();
+        if (heightScore < 0)
+            heightScore = 0;
+
+        UpdateScoreUI();
     }
+
+    // 🔥 코인 획득 함수
+    public void AddCoin(int amount = 1)
+    {
+        coinScore += amount;
+        UpdateScoreUI();
+    }
+
+    // 🔥 UI 최신화
+    private void UpdateScoreUI()
+    {
+        if (scoreText != null)
+            scoreText.text = "Height: " + heightScore;
+
+        if (coinText != null)
+            coinText.text = "Coins: " + coinScore;
+    }
+
+    // ----------------------- 기존 코드 유지 -----------------------
 
     public void GameOver()
     {
-        Debug.Log($"Game Over!\nScore: {score}");
-        currentHeight = 0;
-        score = 0;
+        Debug.Log($"Game Over!\nHeight: {heightScore}\nCoins: {coinScore}");
+
+        heightScore = 0;
+        coinScore = 0;
 
         Time.timeScale = 0f;
 
@@ -67,14 +95,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Player died. Respawning in " + respawnDelay + " seconds...");
 
-        // 1. (선택) 죽는 애니메이션 재생, 화면 페이드 아웃 등
-
-        // 2. 리스폰 딜레이
         yield return new WaitForSeconds(respawnDelay);
 
-        // 3. (선택) 화면 페이드 인
-
-        // 4. 플레이어에게 리스폰 명령
+        // 플레이어 원상복구
         playerController.Respawn(respawnPoint);
         Time.timeScale = 1f;
     }

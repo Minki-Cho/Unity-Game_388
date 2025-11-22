@@ -36,7 +36,7 @@ public class HUDController : MonoBehaviour
 
         if (scoreText != null)
         {
-            scoreText.text = $"Score: {gm.score}";
+            scoreText.text = $"Score: {GameManager.Instance.coinScore}";
         }
     }
 

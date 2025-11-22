@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -235,14 +236,15 @@ public class PlayerController : MonoBehaviour
 
     public void Respawn(Transform spawnPoint)
     {
-        transform.position = spawnPoint.position;
-        transform.rotation = spawnPoint.rotation;
+        //transform.position = spawnPoint.position;
+        //transform.rotation = spawnPoint.rotation;
 
-        if (rb == null) rb = GetComponent<Rigidbody>();
-        rb.linearVelocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        //if (rb == null) rb = GetComponent<Rigidbody>();
+        //rb.linearVelocity = Vector3.zero;
+        //rb.angularVelocity = Vector3.zero;
 
-        this.enabled = true;
+        //this.enabled = true;
+        SceneManager.LoadScene("Game");
     }
 
     IEnumerator JumpSquash()

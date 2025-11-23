@@ -127,8 +127,20 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        float h, v;
+
+        // 모바일 환경일 때: 조이스틱 입력 사용
+        if (Application.isMobilePlatform && MobileInput.Instance != null)
+        {
+            h = MobileInput.Instance.GetHorizontal();
+            v = MobileInput.Instance.GetVertical();
+        }
+        else
+        {
+            // PC 입력
+            h = Input.GetAxisRaw("Horizontal");
+            v = Input.GetAxisRaw("Vertical");
+        }
 
         Vector3 moveDir = (Vector3.right * h + Vector3.forward * v).normalized;
 
@@ -175,20 +187,31 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        bool jumpPressed;
+
+        // 모바일 점프 버튼
+        if (Application.isMobilePlatform && MobileInput.Instance != null)
+        {
+            jumpPressed = MobileInput.Instance.GetJump();
+        }
+        else
+        {
+            // PC Space 키
+            jumpPressed = Input.GetButtonDown("Jump");
+        }
+
+        if (jumpPressed && isGrounded)
         {
             rb.AddForce(Vector3.up * currentJumpForce, ForceMode.Impulse);
 
             if (!isSquashing)
                 StartCoroutine(JumpSquash());
 
-            // 🔊 점프 사운드
             if (jumpSound != null)
             {
-                audioSource.volume = 0.5f;  // 절반 볼륨
+                audioSource.volume = 0.5f;
                 audioSource.PlayOneShot(jumpSound);
             }
-
         }
     }
 

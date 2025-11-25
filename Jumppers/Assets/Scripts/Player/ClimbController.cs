@@ -25,14 +25,13 @@ public class WallClimbAuto : MonoBehaviour
         {
             rb.useGravity = false;
 
-            // 위로 지속적으로 이동
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, climbSpeed, rb.linearVelocity.z);
         }
     }
 
     void TryClimbAuto()
     {
-        // 캐릭터 전방으로 레이케스트를 쏘기
+
         if (Physics.Raycast(transform.position, transform.forward, wallCheckDistance, wallLayer))
         {
             StartClimb();

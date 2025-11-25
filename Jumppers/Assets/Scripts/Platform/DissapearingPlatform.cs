@@ -4,11 +4,11 @@ using System.Collections;
 public class DisappearingPlatform : MonoBehaviour
 {
     [Header("Timings")]
-    public float initialDelay = 3f;       // 처음 3초 평범하게 유지
-    public float blinkDuration = 3f;      // 깜박이는 시간
-    public float blinkInterval = 0.2f;    // 깜박 속도
-    public float fallSpeed = 2f;          // 아래로 떨어지는 속도
-    public float respawnTime = 5f;        // 다시 나타나는 시간 (0이면 영구 소멸)
+    public float initialDelay = 3f;
+    public float blinkDuration = 3f;
+    public float blinkInterval = 0.2f;
+    public float fallSpeed = 2f;
+    public float respawnTime = 5f;
 
     private Renderer[] renderers;
     private Collider col;
@@ -33,14 +33,10 @@ public class DisappearingPlatform : MonoBehaviour
 
     IEnumerator DisappearRoutine()
     {
-        // ------------------------------
-        // 🟢 1) 처음 3초 동안 아무 변화 없음
-        // ------------------------------
+
         yield return new WaitForSeconds(initialDelay);
 
-        // ------------------------------
-        // 🟡 2) 깜박거리기 (blinkDuration 동안)
-        // ------------------------------
+
         float timer = 0f;
         while (timer < blinkDuration)
         {
@@ -53,13 +49,11 @@ public class DisappearingPlatform : MonoBehaviour
             timer += blinkInterval * 2;
         }
 
-        // ------------------------------
-        // 🔴 3) 아래로 떨어지면서 사라짐
-        // ------------------------------
-        col.enabled = false; // 플랫폼 충돌 비활성화
+
+        col.enabled = false;
 
         float fallTimer = 0f;
-        float fallTime = 1f; // 1초 동안 떨어짐
+        float fallTime = 1f;
 
         while (fallTimer < fallTime)
         {
@@ -68,17 +62,15 @@ public class DisappearingPlatform : MonoBehaviour
             yield return null;
         }
 
-        // 완전히 숨김
+
         ToggleRenderers(false);
 
-        // ------------------------------
-        // ♻️ 4) respawnTime 후 다시 등장 (옵션)
-        // ------------------------------
+
         if (respawnTime > 0)
         {
             yield return new WaitForSeconds(respawnTime);
 
-            // 위치 원상복구
+
             transform.position = originalPosition;
 
             ToggleRenderers(true);

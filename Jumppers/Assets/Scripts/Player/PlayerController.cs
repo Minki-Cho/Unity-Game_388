@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Base Stats (기본 능력치)")]
+    [Header("Base Stats")]
     public float defaultMoveSpeed = 6f;
     public float defaultJumpForce = 7f;
 
@@ -26,15 +26,13 @@ public class PlayerController : MonoBehaviour
     [Header("VFX")]
     [SerializeField] private LandingEffectController landingEffectController;
 
-    // 착지 순간 감지용
     private bool wasGrounded;
 
-    // --- Squash & Stretch 설정 ---
     [Header("Squash & Stretch")]
     public Vector3 normalScale = new Vector3(1f, 1f, 1f);
     public Vector3 jumpSquashScale = new Vector3(1.2f, 0.7f, 1.2f);
-    public float squashDuration = 0.1f;   // 찌그러지는 속도
-    public float recoverDuration = 0.15f; // 원상복구 속도
+    public float squashDuration = 0.1f;
+    public float recoverDuration = 0.15f;
 
     [Header("Landing Squash Settings")]
     public Vector3 landingSquashScale = new Vector3(1.3f, 0.6f, 1.3f);
@@ -45,24 +43,20 @@ public class PlayerController : MonoBehaviour
 
     private bool isSquashing = false;
 
-    // --------- ✈ 치트 플라잉 모드 ---------
     [Header("Cheat / Fly Mode")]
-    public bool flyCheatEnabled = false;   // 인스펙터에서 켜두면 시작부터 날기 가능
+    public bool flyCheatEnabled = false;
     public float flySpeed = 10f;
     private bool isFlying = false;
-    // -----------------------------------
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         distToGround = GetComponent<Collider>().bounds.extents.y;
 
-        // 오디오 초기화
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
 
-        // VFX 컨트롤러 자동 할당 (같은 오브젝트에 붙어 있다면)
         if (landingEffectController == null)
             landingEffectController = GetComponent<LandingEffectController>();
 
@@ -77,30 +71,24 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // ✈ P 키로 플라잉 모드 토글
         if (Input.GetKeyDown(KeyCode.P))
         {
             isFlying = !isFlying;
             SetFlyMode(isFlying);
         }
 
-        // 플라잉 모드일 땐 땅 체크/점프/스쿼시 로직 스킵
         if (isFlying)
             return;
 
-        // 1) 먼저 바닥 체크
         CheckGround();
 
-        // 2) 공중(false)이었다가 이번 프레임에 땅(true)이 되면 = 착지
         if (!wasGrounded && isGrounded)
         {
             PlayLandingEffect();
         }
 
-        // 3) 착지 체크 후, 이번 프레임 상태를 저장
         wasGrounded = isGrounded;
 
-        // 4) 점프는 원래대로 유지
         Jump();
 
         //if (!wasGrounded && isGrounded)
@@ -109,7 +97,7 @@ public class PlayerController : MonoBehaviour
         //        StartCoroutine(LandingSquash());
         //}
 
-        wasGrounded = isGrounded; // 상태 갱신
+        wasGrounded = isGrounded;
     }
 
     void FixedUpdate()
@@ -129,7 +117,6 @@ public class PlayerController : MonoBehaviour
     {
         float h, v;
 
-        // 모바일 환경일 때: 조이스틱 입력 사용
         if (Application.isMobilePlatform && MobileInput.Instance != null)
         {
             h = MobileInput.Instance.GetHorizontal();
@@ -137,7 +124,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // PC 입력
             h = Input.GetAxisRaw("Horizontal");
             v = Input.GetAxisRaw("Vertical");
         }
@@ -163,9 +149,9 @@ public class PlayerController : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
 
         float y = 0f;
-        if (Input.GetKey(KeyCode.Space))          // 위로
+        if (Input.GetKey(KeyCode.Space))
             y = 1f;
-        else if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.C)) // 아래로
+        else if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.C))
             y = -1f;
 
         Vector3 moveDir = new Vector3(h, y, v).normalized;
@@ -173,14 +159,12 @@ public class PlayerController : MonoBehaviour
         if (moveDir.sqrMagnitude > 0.01f)
         {
             rb.linearVelocity = moveDir * flySpeed;
-            // 이동 방향으로 바라보게 (위/아래는 무시)
             Vector3 lookDir = new Vector3(moveDir.x, 0f, moveDir.z);
             if (lookDir.sqrMagnitude > 0.01f)
                 transform.forward = lookDir;
         }
         else
         {
-            // 멈춰 있을 땐 관성 제거
             rb.linearVelocity = Vector3.zero;
         }
     }
@@ -189,14 +173,12 @@ public class PlayerController : MonoBehaviour
     {
         bool jumpPressed;
 
-        // 모바일 점프 버튼
         if (Application.isMobilePlatform && MobileInput.Instance != null)
         {
             jumpPressed = MobileInput.Instance.GetJump();
         }
         else
         {
-            // PC Space 키
             jumpPressed = Input.GetButtonDown("Jump");
         }
 
@@ -253,8 +235,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // 디버그용
-            // Debug.Log("[PlayerController] LandingEffectController가 할당되지 않음");
+            // Debug.Log("[PlayerController] LandingEffectController");
         }
     }
 
@@ -281,7 +262,6 @@ public class PlayerController : MonoBehaviour
     {
         isSquashing = true;
 
-        // 1) 아래로 찌그러트리기
         float t = 0;
         while (t < squashDuration)
         {
@@ -291,7 +271,6 @@ public class PlayerController : MonoBehaviour
         }
         transform.localScale = jumpSquashScale;
 
-        // 2) 다시 원래 사이즈로 천천히 복구
         t = 0;
         while (t < recoverDuration)
         {
@@ -308,7 +287,6 @@ public class PlayerController : MonoBehaviour
     {
         landingSquashing = true;
 
-        // 1) 착지 → 아래로 찌그러짐
         float t = 0f;
         while (t < landingSquashDuration)
         {
@@ -318,7 +296,6 @@ public class PlayerController : MonoBehaviour
         }
         transform.localScale = landingSquashScale;
 
-        // 2) 다시 원래로 복구
         t = 0f;
         while (t < landingRecoverDuration)
         {

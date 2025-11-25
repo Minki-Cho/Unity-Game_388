@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CoinRotate : MonoBehaviour
 {
-    public float rotateSpeed = 180f; // 180µµ/√ 
+    public float rotateSpeed = 180f;
 
     void Update()
     {

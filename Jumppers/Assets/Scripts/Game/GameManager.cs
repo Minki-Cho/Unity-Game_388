@@ -12,11 +12,11 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI coinText;  // ← 코인텍스트 추가
+    public TextMeshProUGUI coinText;
 
     [Header("Score System")]
-    public int heightScore = 0;        // 기존 높이 점수
-    public int coinScore = 0;          // 코인 점수
+    public int heightScore = 0;
+    public int coinScore = 0;
 
     public float respawnDelay = 2.0f;
     public Transform respawnPoint;
@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // 높이 기반 점수 계산
         heightScore = Mathf.FloorToInt(player.transform.position.y - playerStartPoint.y);
 
         if (heightScore < 0)
@@ -51,14 +50,12 @@ public class GameManager : MonoBehaviour
         UpdateScoreUI();
     }
 
-    // 🔥 코인 획득 함수
     public void AddCoin(int amount = 1)
     {
         coinScore += amount;
         UpdateScoreUI();
     }
 
-    // 🔥 UI 최신화
     private void UpdateScoreUI()
     {
         if (scoreText != null)
@@ -68,7 +65,6 @@ public class GameManager : MonoBehaviour
             coinText.text = "Coins: " + coinScore;
     }
 
-    // ----------------------- 기존 코드 유지 -----------------------
 
     public void GameOver()
     {
@@ -97,7 +93,6 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(respawnDelay);
 
-        // 플레이어 원상복구
         playerController.Respawn(respawnPoint);
         Time.timeScale = 1f;
     }

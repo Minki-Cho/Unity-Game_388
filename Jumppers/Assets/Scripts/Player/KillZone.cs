@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿// File name   : KillZone.cs
+// Author(s)   : Dohun Lee
+// Copyright   : Copyright(C) 2025 DigiPen Institute of Technology
+using UnityEngine;
 
 public class KillZone : MonoBehaviour
 {

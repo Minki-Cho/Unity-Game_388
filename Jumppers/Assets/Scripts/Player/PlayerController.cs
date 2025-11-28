@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿// File name   : PlayerController.cs
+// Author(s)   : Dohun Lee, Minki Cho. Jinwon Park
+// Copyright   : Copyright(C) 2025 DigiPen Institute of Technology
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;

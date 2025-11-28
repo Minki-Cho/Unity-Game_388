@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿// File name   : StartModifierPlatform.cs
+// Author(s)   : Dohun Lee, Minki Cho
+// Copyright   : Copyright(C) 2025 DigiPen Institute of Technology
+using UnityEngine;
+using UnityEngine;
 
 public class StatModifierPlatform : MonoBehaviour
 {

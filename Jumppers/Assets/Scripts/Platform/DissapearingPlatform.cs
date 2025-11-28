@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿// File name   : DissapearingPlatform.cs
+// Author(s)   : Minki Cho
+// Copyright   : Copyright(C) 2025 DigiPen Institute of Technology
+using UnityEngine;
 using System.Collections;
 
 public class DisappearingPlatform : MonoBehaviour

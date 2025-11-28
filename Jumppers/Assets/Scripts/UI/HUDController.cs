@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿//File name    : HUDController.cs
+//Author(s)    : Jin Park
+//Copyright    : Copyright (C) 2025 DigiPen Institute of Technology 
+
+using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 

@@ -10,6 +10,8 @@ This public repository includes all **platform-agnostic Unity gameplay code**, e
 ---
 
 ## Jummpers  
+👇 Click below to start the game:
+[▶️ **PLAY GAME NOW**](https://minki-portfolio.info/web/index.html)
 ![Happy](Jumppers/Assets/screenshot.jpg)
 
 ---

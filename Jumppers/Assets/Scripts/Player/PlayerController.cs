@@ -94,11 +94,11 @@ public class PlayerController : MonoBehaviour
 
         Jump();
 
-        //if (!wasGrounded && isGrounded)
-        //{
-        //    if (!landingSquashing)
-        //        StartCoroutine(LandingSquash());
-        //}
+        if (!wasGrounded && isGrounded)
+        {
+            if (!landingSquashing)
+                StartCoroutine(LandingSquash());
+        }
 
         wasGrounded = isGrounded;
     }

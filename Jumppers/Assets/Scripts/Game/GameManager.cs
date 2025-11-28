@@ -3,7 +3,6 @@
 // Copyright   : Copyright(C) 2025 DigiPen Institute of Technology
 using UnityEngine;
 using TMPro;
-using UnityEngine;
 using System.Collections;
 
 public class GameManager : MonoBehaviour

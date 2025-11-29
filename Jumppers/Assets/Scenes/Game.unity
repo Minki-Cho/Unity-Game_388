@@ -34934,6 +34934,7 @@ MonoBehaviour:
   yLeadAmount: 2
   yLeadSpeed: 2
   deadZoneRadius: 1.5
+  maxJumpSpeed: 15
 --- !u!4 &1120823389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6152299014247383670, guid: 57b32168a216646469b2daa667456376, type: 3}
@@ -37358,7 +37359,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &1176540886
@@ -37374,7 +37375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultMoveSpeed: 6
-  defaultJumpForce: 7
+  defaultJumpForce: 20
   currentMoveSpeed: 0
   currentJumpForce: 0
   fallMultiplier: 3.5
